@@ -55,6 +55,20 @@ button:hover {
   box-shadow: inset 0 -3px #ffffff;
 }
 
+#custom-search {
+  color: white;
+  margin: 10px;
+  padding-left: 7px;
+  padding-right: 7px;
+  font-size: 1em;
+  border-radius: 10px;
+  background-color: #e34444;
+}
+
+#custom-search:hover {
+  background-color: #bf2626;
+}
+
 #tray {
   margin-left: 10px;
 }
@@ -96,8 +110,12 @@ button:hover {
 
 #custom-poweroff {
   color: white;
-  padding-right: 5px;
-  padding-left: 5px;
+  font-size: 1.5em;
+  padding-right: 0.4em;
+}
+
+#custom-poweroff:hover {
+  color: #d4d3cf;
 }
 
 #window {
