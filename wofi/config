@@ -7,3 +7,4 @@ hide_scroll=true
 lines=5
 width=30%
 valign=center
+insensitive=true
