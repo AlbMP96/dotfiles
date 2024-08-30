@@ -5,6 +5,7 @@
     "margin-right": 10,
     "height" : 35,
     "modules-left": [
+      "custom/poweroff",
       "hyprland/workspaces",
       "custom/search",
       "tray",
@@ -18,7 +19,7 @@
     "pulseaudio",
     "network",
     "clock",
-    "custom/poweroff",
+    "custom/notification",
     ],
     "hyprland/window": {
       "format": "{}",
@@ -41,7 +42,7 @@
       },
     },
     "custom/search": {
-	"format": "SEARCH",
+	"format": "󰣇",
 	"on-click": "wofi --show drun -a -s ~/wofi/style.css -c ~/wofi/config",
     },
     "tray": {
@@ -105,8 +106,28 @@
       "on-click": "pavucontrol"
     },
     "custom/poweroff": {
-	"format": "󰣇",
+	"format": "⏻",
 	"tooltip": false,
 	"on-click": "wlogout"
+    },
+    "custom/notification": {
+      "tooltip": false,
+      "format": "{icon}",
+      "format-icons": {
+        "notification": "<span foreground='red'><sup></sup></span>",
+        "none": "",
+        "dnd-notification": "<span foreground='red'><sup></sup></span>",
+        "dnd-none": "",
+        "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+        "inhibited-none": "",
+        "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+        "dnd-inhibited-none": ""
+      },
+      "return-type": "json",
+      "exec-if": "which swaync-client",
+      "exec": "swaync-client -swb",
+      "on-click": "swaync-client -t -sw",
+      "on-click-right": "swaync-client -d -sw",
+      "escape": true
     },
 }
